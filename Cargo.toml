@@ -1,0 +1,9 @@
+[workspace]
+resolver = "2"
+
+members = ["day1"]
+
+[workspace.dependencies]
+anyhow = "1"
+thiserror = "1"
+lazy_static = "1"
