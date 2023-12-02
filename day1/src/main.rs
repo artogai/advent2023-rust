@@ -1,9 +1,9 @@
 use lazy_static::lazy_static;
 use std::{
     fs::File,
-    io::{self, BufRead, BufReader, Lines},
-    path::Path,
+    io::{BufReader, Lines},
 };
+use utils::read_lines;
 
 use anyhow::Result;
 
@@ -75,12 +75,4 @@ fn make_c_value(digits: &[char]) -> Result<u32> {
         .parse::<u32>()?;
 
     Ok(c)
-}
-
-fn read_lines<P>(filename: P) -> io::Result<io::Lines<io::BufReader<File>>>
-where
-    P: AsRef<Path>,
-{
-    let file = File::open(filename)?;
-    Ok(io::BufReader::new(file).lines())
 }
