@@ -1,8 +1,9 @@
 [workspace]
 resolver = "2"
 
-members = ["day1", "day2", "day3", "day4", "utils"]
+members = ["day1", "day2", "day3", "day4", "day5", "utils"]
 
 [workspace.dependencies]
 anyhow = "1"
 lazy_static = "1"
+rayon = "1"
